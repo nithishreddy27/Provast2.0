@@ -309,6 +309,7 @@ export const getServerSideProps = async ({ req, res }) => {
   );
   const session = await getLoginSession(req);
   const user = (session?._doc && (await findUser(session._doc))) ?? null;
+  console.log("user",user)
   if (!user) {
     return {
       redirect: {
