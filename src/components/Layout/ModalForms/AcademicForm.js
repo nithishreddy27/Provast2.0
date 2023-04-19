@@ -10,7 +10,7 @@ import {
   mbaSrmBranches,
   typeOfEducation,
   typeOfEducationGrade,
-} from "../../../lib/";
+} from "../../../lib/helper";
 import { useUser } from "../../../lib/hooks";
 import { DropDown } from "../../Reusables/Dropdown";
 import { mutate } from "swr";
