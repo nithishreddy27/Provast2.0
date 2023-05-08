@@ -620,7 +620,6 @@ export const getServerSideProps = async function ({ req, res }) {
   res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");
   const session = await getLoginSession(req);
   const user = (session?._doc && (await findUser(session._doc))) ?? null;
-  console.log(user)
   if (!user) {
     return {
       redirect: {
